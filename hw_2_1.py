@@ -1,4 +1,4 @@
-#square number
-number = input("Введіть число: ")
-result = int(number) ** 2
+number = int(input("Введіть число: "))
+
+result = number ** 2
 print("Квадрат числа: ", result)
