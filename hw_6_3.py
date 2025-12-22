@@ -5,4 +5,4 @@ while len(number) > 1:
     for char in number:
         result *= int(char)
     number = str(result)
-print(f'{number}')
+print(number)
