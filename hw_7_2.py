@@ -1,8 +1,10 @@
 def correct_sentence(text):
-    if text[-1] != ".":
-        return f"{text[0].upper() + text[1:]}."
-    else:
-        return f"{text[0].upper() + text[1:]}"
+    # if text[-1] != ".":
+    #     return f"{text[0].upper() + text[1:]}."
+    # else:
+    #     return f"{text[0].upper() + text[1:]}"
+    text = text[0].upper() + text[1:]
+    return text if text.endswith('.') else text + '.'
 
 assert correct_sentence("greetings, friends") == "Greetings, friends.", 'Test1'
 assert correct_sentence("hello") == "Hello.", 'Test2'
