@@ -1,3 +1,13 @@
+# def is_palindrome(text: str | list) -> bool:
+#
+#     cleaned_list = [
+#         char.lower()
+#         for char in text
+#         if char.isalnum()
+#     ]
+#
+#     return cleaned_list == cleaned_list[::-1]
+
 def is_palindrome(text):
     from string import punctuation
     text = ''.join([letter for letter in text if letter not in punctuation])
