@@ -6,9 +6,8 @@ def first_word(text: str) -> str:
     for letter in text:
         if letter.isalpha() or letter == "'":
             word += letter
-        else:
-            if word:
-                break
+        elif word:
+            break
     return word
 
 assert first_word("Hello world") == "Hello", 'Test1'
