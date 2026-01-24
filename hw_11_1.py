@@ -1,6 +1,7 @@
 def prime_generator(end):
     """
-      end: верхня межа діапазону для генератора
+    Генератор простих чисел від 2 до end
+    end: верхня межа діапазону для генератора
     """
     for num in range(2, end + 1):
         simple_num = True
