@@ -9,16 +9,26 @@ class Counter:
        self.current = start
 
    def set_max(self, max_max):
-        pass
+       if max_max <= self.min_value:
+           raise ValueError("Max must be greater than min")
+       self.max_value = max_max
 
    def set_min(self, min_min):
-       pass
+       if min_min >= self.max_value:
+           raise ValueError("Min must be less than max")
+       self.min_value = min_min
 
    def step_up(self):
-       pass
+       if self.current < self.max_value:
+           self.current += 1
+       else:
+           raise ValueError('Reached its maximum')
 
    def step_down(self):
-       pass
+       if self.current > self.min_value:
+           self.current -= 1
+       else:
+           raise ValueError('Reached its minimum')
 
    def get_current(self):
        return self.current
@@ -32,7 +42,7 @@ assert counter.get_current() == 10, 'Test1'
 try:
     counter.step_up()  # ValueError
 except ValueError as e:
-    print(e) # Достигнут максимум
+    print(e) # Досягнуто максимум
 assert counter.get_current() == 10, 'Test2'
 
 counter.set_min(7)
@@ -43,5 +53,5 @@ assert counter.get_current() == 7, 'Test3'
 try:
     counter.step_down()  # ValueError
 except ValueError as e:
-    print(e) # Достигнут минимум
+    print(e) # Досягнуто мінімум
 assert counter.get_current() == 7, 'Test4'
