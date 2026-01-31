@@ -1,0 +1,2 @@
+class GroupSizeLimitError(Exception):
+    pass
